@@ -22,3 +22,13 @@ def database(app):
     yield
     db.session.commit()
     db.drop_all()
+
+
+@pytest.fixture
+def pook():
+    import pook
+
+    pook.on()
+
+    yield pook
+    pook.off()

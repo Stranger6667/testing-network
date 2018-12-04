@@ -2,9 +2,8 @@ from factory import Faker
 from factory.alchemy import SQLAlchemyModelFactory
 
 from booking import models
-from booking.models import db
 
-session = db.create_scoped_session()
+session = models.db.create_scoped_session()
 
 
 class ExchangeRateFactory(SQLAlchemyModelFactory):

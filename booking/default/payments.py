@@ -1,7 +1,7 @@
 from decimal import Decimal
 
 from . import exchange
-from .models import db, Transaction
+from ..models import db, Transaction
 
 
 def save_transaction(booking_id: int, amount: Decimal, currency: str):

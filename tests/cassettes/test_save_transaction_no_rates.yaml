@@ -1,0 +1,21 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.20.1]
+    method: GET
+    uri: http://127.0.0.1:5000/to_eur?amount=10&currency=NOK
+  response:
+    body: {string: '{"detail":"No such rate"}
+
+        '}
+    headers:
+      Content-Length: ['26']
+      Content-Type: [application/json]
+      Date: ['Sun, 02 Dec 2018 12:21:47 GMT']
+      Server: [Werkzeug/0.14.1 Python/3.7.0]
+    status: {code: 400, message: BAD REQUEST}
+version: 1

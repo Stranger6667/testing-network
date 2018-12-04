@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -9,7 +7,6 @@ class Transaction(db.Model):
     """Payment transaction."""
 
     id = db.Column(db.Integer, primary_key=True)
-    created = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
 
     booking_id = db.Column(db.Integer, nullable=False)
 

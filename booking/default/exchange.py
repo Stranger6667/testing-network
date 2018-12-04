@@ -1,7 +1,7 @@
 from decimal import Decimal
 
-from .exceptions import NoExchangeRateError
-from .models import ExchangeRate
+from ..exceptions import NoExchangeRateError
+from ..models import ExchangeRate
 
 
 def to_eur(amount: Decimal, currency: str):
@@ -11,4 +11,4 @@ def to_eur(amount: Decimal, currency: str):
     rate = ExchangeRate.query.filter_by(currency=currency).one_or_none()
     if not rate:
         raise NoExchangeRateError("No such rate")
-    return rate.ratio * amount
+    return amount / rate.ratio
